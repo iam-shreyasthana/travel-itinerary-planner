@@ -6,6 +6,7 @@ import itinerarySchema from '../../models/ItinerarySchema';
 const uri = process.env.MONGODB_URI; // Your MongoDB URI here
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
   if (req.method === 'POST') {
     const { itinerary } = req.body;
